@@ -2,10 +2,11 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 int main()
 {
-    int fd = open("./file.txt", "ORDONLY|OCREAT");
+    int fd = open("./file.txt", O_RDONLY|O_CREAT);
     close(fd);
     return 0;
 }
