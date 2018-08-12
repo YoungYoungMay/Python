@@ -5,7 +5,7 @@
 
 int main()
 {
-    int fd = open("file.txt", "w");
+    int fd = open("./file.txt", "ORDONLY|OCREAT");
     close(fd);
     return 0;
 }
